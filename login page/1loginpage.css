@@ -1,0 +1,77 @@
+body {
+  background-image:url('https://cdn.wallpapersafari.com/96/86/kQIbD1.jpg');
+    font-family: Assistant, sans-serif;
+    display: flex;
+    min-height: 90vh;
+  }
+  .login {
+    color: rgb(252, 252, 252);
+    background: #1da2ae;
+    background: 
+      -webkit-linear-gradient(to right, #f2ff00, #0752c9);
+    background: 
+      linear-gradient(to right, #0d209d, #2857ff);
+    margin: auto;
+    box-shadow: 
+      0px 2px 10px rgba(255, 255, 255, 0.932), 
+      0px 10px 20px rgba(19, 159, 3, 0.957), 
+      0px 30px 60px 1px rgba(0,0,0,0.5);
+    border-radius: 80px;
+    padding: 90px;
+  }
+  .login .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .login .head .company {
+    font-size: 3.2em;
+  }
+  .login .msg {
+    text-align: center;
+  }
+  .login .form input[type=text].text {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+  }
+  .login .form .text::placeholder {
+    color: #D3D3D3;
+  }
+  .login .form input[type=password].password {
+    border: none;
+    background: none;
+    box-shadow: 0px 2px 0px 0px white;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+    outline: none;
+    margin-bottom: 60px;
+    margin-top: 40px;
+  }
+  .login .form .password::placeholder {
+    color: #D3D3D3;
+  }
+  .login .form .btn-login {
+    background: none;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0px 0px 0px 2px white;
+    border-radius: 3px;
+    padding: 5px 2em;
+    transition: 0.5s;
+  }
+  .login .form .btn-login:hover {
+    background: white;
+    color: dimgray;
+    transition: 0.5s;
+  }
+  .login .forgot {
+    text-decoration: none;
+    color: white;
+    float: right;
+  }

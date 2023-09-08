@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['bar']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['{Platform}', 'Like', 'Comment', 'Share'],
+        ['Facebook', 1000, 400, 200],
+        ['Twitter', 1170, 460, 250],
+        ['Instagram', 660, 1120, 300],
+        ['Youtube', 1030, 540, 350]
+      ]);
+
+      var options = {
+        chart: {
+          title: 'Social Media Dashboard',
+          subtitle: 'Social Media Intractions: Facebook, Twitter, Instagram, Youtube.',
+        }
+      };
+
+      var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+      chart.draw(data, google.charts.Bar.convertOptions(options));
+    }
+  </script>
+        <title>Social media Dashboard</title>
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+
+    <body>
+        <div class="topnav" id="myTopnav">
+            <a href="#">Social Media Analyser</a>
+            <a href="#home" class="active">Home</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+        <header class="header">
+            <div class="container header__container">
+                <div class="header__copy">
+                    <h1>Social Media Dashboard</h1>
+                    <p>Total Followers: 23,004</p>
+                </div>
+                <div class="header__switch">
+                    <p>Dark Mode</p>
+                    <button
+                        id="toggle"
+                        class="toggle"
+                        aria-label="switch dark mode"
+                    ></button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+            <!-- First Section -->
+            <div class="container section_one">
+                <!-- Card Facebook -->
+                <div class="card card--facebook">
+                    <div class="bar"></div>
+                    <div class="card__header">
+                        <img
+                            src="images/icon-facebook.svg"
+                            alt="icon facebook"
+                        />
+                        <span>@nathanf</span>
+                    </div>
+                    <div class="card__copy">
+                        <p>1987</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="card__footer">
+                        <p>
+                            <img src="images/icon-up.svg" alt="icon up" />
+                            <span>12 Today</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Twitter -->
+                <div class="card card--twitter">
+                    <div class="bar"></div>
+                    <div class="card__header">
+                        <img src="images/icon-twitter.svg" alt="icon twitter" />
+                        <span>@nathanf</span>
+                    </div>
+                    <div class="card__copy">
+                        <p>1044</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="card__footer">
+                        <p>
+                            <img src="images/icon-up.svg" alt="icon up" />
+                            <span>99 Today</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Instagram -->
+                <div class="card card--instagram">
+                    <div class="bar"></div>
+                    <div class="card__header">
+                        <img
+                            src="images/icon-instagram.svg"
+                            alt="icon instagram"
+                        />
+                        <span>@realnathanf</span>
+                    </div>
+                    <div class="card__copy">
+                        <p>11k</p>
+                        <p>Followers</p>
+                    </div>
+                    <div class="card__footer">
+                        <p>
+                            <img src="images/icon-up.svg" alt="icon up" />
+                            <span>1099 Today</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card Youtube -->
+                <div class="card card--youtube">
+                    <div class="bar"></div>
+                    <div class="card__header">
+                        <img src="images/icon-youtube.svg" alt="icon youtube" />
+                        <span>Nathan F.</span>
+                    </div>
+                    <div class="card__copy">
+                        <p>8239</p>
+                        <p>Subscribers</p>
+                    </div>
+                    <div class="card__footer">
+                        <p>
+                            <img src="images/icon-down.svg" alt="icon down" />
+                            <span class="text-red">144 Today</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <section class="container section">
+                <h2>Overview - Today</h2>
+                <div class="cards">
+                    <!-- Card 1 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Page Views</p>
+                            <img
+                                src="images/icon-facebook.svg"
+                                alt="icon facebook"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>87</p>
+                            <p>
+                                <img src="images/icon-up.svg" alt="icon up" />
+                                <span class="text-green">3%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Likes</p>
+                            <img
+                                src="images/icon-facebook.svg"
+                                alt="icon facebook"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>52</p>
+                            <p>
+                                <img
+                                    src="images/icon-down.svg"
+                                    alt="icon icon-down"
+                                />
+                                <span class="text-red">2%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Likes</p>
+                            <img
+                                src="images/icon-instagram.svg"
+                                alt="icon instagram"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>5462</p>
+                            <p>
+                                <img src="images/icon-up.svg" alt="icon up" />
+                                <span class="text-green">2257%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Profile Views</p>
+                            <img
+                                src="images/icon-instagram.svg"
+                                alt="icon instagram"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>52k</p>
+                            <p>
+                                <img src="images/icon-up.svg" alt="icon up" />
+                                <span class="text-green">1375%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Retweets</p>
+                            <img
+                                src="images/icon-twitter.svg"
+                                alt="icon twitter"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>117</p>
+                            <p>
+                                <img src="images/icon-up.svg" alt="icon up" />
+                                <span class="text-green">303%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Likes</p>
+                            <img
+                                src="images/icon-twitter.svg"
+                                alt="icon twitter"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>507</p>
+                            <p>
+                                <img src="images/icon-up.svg" alt="icon up" />
+                                <span class="text-green">553%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Likes</p>
+                            <img
+                                src="images/icon-youtube.svg"
+                                alt="icon youtube"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>107</p>
+                            <p>
+                                <img
+                                    src="images/icon-down.svg"
+                                    alt="icon down"
+                                />
+                                <span class="text-red">19%</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="cards__card">
+                        <div class="cards__header">
+                            <p>Total Views</p>
+                            <img
+                                src="images/icon-youtube.svg"
+                                alt="icon youtube"
+                            />
+                        </div>
+                        <div class="cards__footer">
+                            <p>1407</p>
+                            <p>
+                                <img
+                                    src="images/icon-down.svg"
+                                    alt="icon down"
+                                />
+                                <span class="text-red">12%</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <div id="columnchart_material" style="width: 1510px; height: 500px;"></div>
+            <div class="responsive-container-block bigContainer">
+            <div class="responsive-container-block Container ">
+              <p class="text-blk heading" id="about">
+                About
+              </p>
+              <p class="text-blk subHeading">
+                Discover the ultimate hub for streamlined social media management. The Social Media Dashboard. As a passionate advocate for both technology and human connection, I embarked on this journey to revolutionize your social media experience. Our platform is meticulously designed to simplify the intricacies of online interaction, offering innovative features that empower you. Join me in shaping the future of social engagement, one dashboard at a time.
+            </p>
+                <div class="social-icons-container">
+                <a class="social-icon">
+                  <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb33.png">
+                </a>
+                <a class="social-icon">
+                  <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb34.png">
+                </a>
+                <a class="social-icon">
+                  <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb35.png">
+                </a>
+                <a class="social-icon">
+                  <img class="socialIcon image-block" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/bb36.png">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="section_10">
+            <div class="responsive-container-block container">
+              <form id="contact">
+                <div class="responsive-container-block form-container">
+                  <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 first-name" id="i10mt-5">
+                    <p class="text-blk input-title">
+                      Full Name
+                    </p>
+                    <input class="input" id="ijowk-5" name="FirstName" placeholder="First Name">
+                  </div>
+                  <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                    <p class="text-blk input-title">
+                      Email Address
+                    </p>
+                    <input class="input" id="ipmgh-5" name="Email" placeholder="Email">
+                  </div>
+                  <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-5">
+                    <p class="text-blk input-title">
+                      Message
+                    </p>
+                    <textarea class="textinput" id="i5vyy-5" placeholder="Write a message..."></textarea>
+                  </div>
+                  <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12">
+                    <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-3">
+                      Send Message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        <footer class="container">
+            <div class="attribution">
+               <h4>All rights reserved @INFOTRIXS INTERNSHIP WORK</h4>
+            </div>
+        </footer>
+        <!--Overview -
+        Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k
+        1375% Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407
+        12%
+
+         -->
+        <script src="js/app.js"></script>
+    </body>
+</html>
